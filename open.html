@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>ノートを開く - ボイスメモAI</title>
+    <style>
+        :root {
+            --accent: #5B5FED;
+            --accent-light: #eef0ff;
+            --text: #1a1a2e;
+            --text-secondary: #5a5a7a;
+            --border: #e0e0f0;
+            --bg: #f8f8fc;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px 28px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 2px 12px rgba(30, 30, 80, 0.06);
+        }
+
+        .app-name {
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .open-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        .open-button:active {
+            opacity: 0.85;
+        }
+
+        .hint {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+
+        .hint ul {
+            padding-left: 1.2em;
+        }
+
+        .error {
+            color: #b3261e;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="app-name">ボイスメモAI</div>
+        <h1>ノートを開く</h1>
+        <div id="content">
+            <p>このページはカレンダーの予定に紐付けられた録音ノートへの中継ページです。下のボタンを押すと、ボイスメモAIアプリで該当のノートが開きます。</p>
+            <a id="openLink" class="open-button" href="#">ボイスメモAIで開く</a>
+            <div class="hint">
+                開かない場合：
+                <ul>
+                    <li>ボイスメモAIがこのiPhoneにインストールされているかご確認ください</li>
+                    <li>アプリ内ブラウザで表示している場合は、Safariで開き直してからボタンを押してください</li>
+                    <li>ノートが削除されている場合は開けません</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var meetingId = params.get("meeting") || "";
+            var uuidPattern = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+
+            if (!uuidPattern.test(meetingId)) {
+                document.getElementById("content").innerHTML =
+                    '<p class="error">リンクの形式が正しくありません。カレンダーの予定に記載されたリンクからアクセスしてください。</p>';
+                return;
+            }
+
+            var deepLink = "voicememoai://open?meeting=" + meetingId.toUpperCase();
+            var button = document.getElementById("openLink");
+            button.setAttribute("href", deepLink);
+
+            // ページ表示直後に一度だけ自動でアプリ起動を試みる
+            // （アプリ内ブラウザ等でブロックされた場合はボタンからの手動起動にフォールバック）
+            setTimeout(function () {
+                window.location.href = deepLink;
+            }, 400);
+        })();
+    </script>
+</body>
+
+</html>

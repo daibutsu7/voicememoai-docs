@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End User License Agreement - VoiceMemoAI</title>
+    <style>
+        :root {
+            --accent: #5B5FED;
+            --accent-light: #eef0ff;
+            --text: #1a1a2e;
+            --text-secondary: #4a4a68;
+            --border: #e0e0f0;
+            --bg: #f8f8fc;
+            --card: #ffffff;
+            --warning-bg: #fff8e6;
+            --warning-border: #f5c542;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.85;
+            font-size: 15px;
+        }
+
+        header {
+            background: var(--accent);
+            color: white;
+            padding: 40px 24px 32px;
+            text-align: center;
+        }
+
+        header .app-name { font-size: 14px; opacity: 0.85; letter-spacing: 0.05em; margin-bottom: 8px; }
+        header h1 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+        header .updated { font-size: 13px; opacity: 0.8; }
+
+        header .lang-switch { margin-top: 16px; }
+        header .lang-switch a {
+            display: inline-block;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 99px;
+            padding: 5px 16px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        header .lang-switch a:hover { background: rgba(255, 255, 255, 0.3); }
+
+        main { max-width: 780px; margin: 32px auto; padding: 0 16px 64px; }
+
+        .intro {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .intro p { margin-bottom: 10px; }
+        .intro p:last-child { margin-bottom: 0; }
+
+        .notice {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #6b5000;
+        }
+        .notice p { margin-bottom: 8px; }
+        .notice p:last-child { margin-bottom: 0; }
+
+        section {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        section h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        section p { color: var(--text-secondary); margin-bottom: 12px; }
+        section p:last-child { margin-bottom: 0; }
+        section strong { color: var(--text); font-weight: 700; }
+
+        ol, ul { padding-left: 22px; margin: 10px 0 14px; }
+        ul.lettered { list-style: none; padding-left: 6px; }
+        li { color: var(--text-secondary); margin-bottom: 8px; }
+
+        a { color: var(--accent); word-break: break-word; }
+
+        .toc {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .toc ol { margin: 0; padding-left: 0; list-style: none; }
+        .toc li { margin-bottom: 4px; font-size: 14px; }
+        .toc a { text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+
+        .todo {
+            background: #fff3b0;
+            color: #6b5000;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.92em;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            padding: 24px 16px;
+            border-top: 1px solid var(--border);
+        }
+        footer a { display: inline-block; margin: 0 8px; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 21px; }
+            section { padding: 18px 16px; }
+            body { font-size: 14.5px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p class="app-name">VoiceMemoAI (Voice Memo AI — Transcription &amp; Meeting Notes)</p>
+        <h1>End User License Agreement</h1>
+        <p class="updated">Last updated: <span class="todo">YYYY-MM-DD</span></p>
+        <p class="lang-switch"><a href="terms.html">日本語版 →</a></p>
+    </header>
+
+    <main>
+
+        <div class="intro">
+            <p>This End User License Agreement (EULA) governs your use of <strong>VoiceMemoAI (Voice Memo AI — Transcription &amp; Meeting Notes)</strong> for iOS and macOS, published by TAF Studio. It consists of 22 sections.</p>
+            <p>Please also review our <a href="https://daibutsu7.github.io/voicememoai-docs/privacy.html">Privacy Policy</a>. A Japanese version of this Agreement is available at <a href="terms.html">日本語版</a>.</p>
+        </div>
+
+        <div class="notice">
+            <p><strong>PLEASE READ THIS AGREEMENT CAREFULLY. IT CONTAINS DISCLAIMERS OF WARRANTY AND LIMITATIONS OF LIABILITY THAT AFFECT YOUR LEGAL RIGHTS.</strong></p>
+            <p><strong>IMPORTANT NOTICE REGARDING RECORDING:</strong> THE LAWS GOVERNING THE RECORDING OF CONVERSATIONS DIFFER FROM PLACE TO PLACE. IN SOME U.S. STATES IT IS UNLAWFUL TO RECORD A CONVERSATION UNLESS EVERY PARTICIPANT CONSENTS. YOU — NOT THE DEVELOPER — ARE SOLELY RESPONSIBLE FOR OBTAINING ANY CONSENT REQUIRED BY LAW. SEE SECTION 6.</p>
+        </div>
+
+        <nav class="toc">
+          <p class="toc-title">Contents</p>
+          <ol>
+            <li><a href="#s1">1. Acceptance of this Agreement; Parties</a></li>
+            <li><a href="#s2">2. Scope of License (Apple Minimum Terms §2)</a></li>
+            <li><a href="#s3">3. Restrictions</a></li>
+            <li><a href="#s4">4. Intellectual Property Rights</a></li>
+            <li><a href="#s5">5. Recording Capture; Artificial Intelligence Features; Accuracy and Completeness of Output</a></li>
+            <li><a href="#s6">6. Recording: Your Sole Responsibility for Consent and Legality</a></li>
+            <li><a href="#s7">7. Data, Storage, Loss, Backup, and Security</a></li>
+            <li><a href="#s8">8. Subscriptions, Payment, and Refunds</a></li>
+            <li><a href="#s9">9. Maintenance and Support (Apple Minimum Terms §3)</a></li>
+            <li><a href="#s10">10. Modification, Suspension, and Termination of the Application</a></li>
+            <li><a href="#s11">11. Warranty; Disclaimer (Apple Minimum Terms §4)</a></li>
+            <li><a href="#s12">12. Limitation of Liability</a></li>
+            <li><a href="#s13">13. Product Claims (Apple Minimum Terms §5)</a></li>
+            <li><a href="#s14">14. Third Party Services and Third Party Terms (Apple Minimum Terms §9)</a></li>
+            <li><a href="#s15">15. Indemnification</a></li>
+            <li><a href="#s16">16. Release</a></li>
+            <li><a href="#s17">17. Legal Compliance (Apple Minimum Terms §7)</a></li>
+            <li><a href="#s18">18. Changes to this Agreement</a></li>
+            <li><a href="#s19">19. Governing Law and Venue</a></li>
+            <li><a href="#s20">20. Developer Name, Address, and Contact Information (Apple Minimum Terms §8)</a></li>
+            <li><a href="#s21">21. Third Party Beneficiary (Apple Minimum Terms §10)</a></li>
+            <li><a href="#s22">22. General</a></li>
+          </ol>
+        </nav>
+
+        <section id="s1">
+          <h2>1. Acceptance of this Agreement; Parties</h2>
+          <p>This End User License Agreement (this "<strong>Agreement</strong>") is a binding legal agreement between you ("<strong>you</strong>" or the "<strong>End-User</strong>") and <span class="todo">TAF Studio / full legal name of the individual proprietor</span> ("<strong>Developer</strong>", "<strong>we</strong>", "<strong>us</strong>"), the developer of the mobile and desktop application VoiceMemoAI and its related features and content (collectively, the "<strong>Application</strong>").</p>
+          <p>You accept this Agreement by tapping or clicking the button presented to you in the Application indicating that you agree to these terms, or, if no such button is presented to you, by downloading, installing, or using the Application. <strong>If you do not agree to this Agreement, do not install or use the Application.</strong></p>
+          <p><strong>Acknowledgement (Apple Minimum Terms §1).</strong> You and Developer acknowledge that this Agreement is concluded between you and Developer only, and <strong>not with Apple Inc. ("Apple")</strong>, and that Developer, not Apple, is solely responsible for the Application and the content thereof. This Agreement does not provide for usage rules for the Application that are in conflict with the Apple Media Services Terms and Conditions or the Volume Content Terms as of the effective date of this Agreement, which you acknowledge you have had the opportunity to review.</p>
+        </section>
+        <section id="s2">
+          <h2>2. Scope of License (Apple Minimum Terms §2)</h2>
+          <p>Subject to your compliance with this Agreement, Developer grants you a limited, <strong>non-exclusive, non-transferable, non-sublicensable</strong> license to use the Application on any Apple-branded products that you own or control, and as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions, except that the Application may be accessed and used by other accounts associated with the purchaser via <strong>Family Sharing, volume purchasing, or Legacy Contacts</strong>.</p>
+          <p>This is a license, not a sale. Developer reserves all rights not expressly granted.</p>
+        </section>
+        <section id="s3">
+          <h2>3. Restrictions</h2>
+          <p>You shall not, and shall not permit any third party to:</p>
+        <ul class="lettered">
+          <li>(a) reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Application, except to the extent such restriction is prohibited by applicable law;</li>
+          <li>(b) copy, distribute, sell, rent, lease, lend, sublicense, or otherwise transfer the Application or any part of it;</li>
+          <li>(c) remove, obscure, or alter any proprietary notice;</li>
+          <li>(d) use the Application to create, process, store, or transmit any content that is unlawful, or that infringes or misappropriates the intellectual property, privacy, publicity, or other rights of any third party;</li>
+          <li>(e) <strong>record any conversation, meeting, call, or other communication in violation of any applicable law, including any law requiring the notification of, or the consent of, some or all participants</strong> (see Section 6);</li>
+          <li>(f) use the Application, or any Output (as defined in Section 5), to harass, defame, discriminate against, or unlawfully surveil any person;</li>
+          <li>(g) use the Application in violation of any applicable export control or sanctions law; or</li>
+          <li>(h) use the Application in a manner that violates any applicable third party terms of agreement (see Section 14).</li>
+        </ul>
+        </section>
+        <section id="s4">
+          <h2>4. Intellectual Property Rights</h2>
+          <p><strong>4.1 Developer's rights.</strong> All copyright, trademark, and other intellectual property rights in and to the Application are and remain the property of Developer and its licensors. Nothing in this Agreement transfers any such right to you.</p>
+          <p><strong>4.2 Your content.</strong> As between you and Developer, <strong>you retain all rights in and to the audio recordings, transcripts, notes, and other content that you create with or submit to the Application ("Your Content")</strong>. You grant Developer only the limited rights necessary to operate the Application and provide the features you request. Developer does not use Your Content to train, retrain, or fine-tune any generative artificial intelligence model.</p>
+          <p><strong>This statement concerns Developer's own conduct only.</strong> It is not a representation, warranty, or guarantee as to the conduct of Apple, Google, or any other third-party provider whose services the Application uses, and Developer does not warrant that any third-party provider will comply with its own terms, policies, or representations. <strong>See Section 14.</strong></p>
+          <p><strong>4.3 Third-party IP claims (Apple Minimum Terms §6).</strong> You and Developer acknowledge that, in the event of any third party claim that the Application, or your possession and use of the Application, infringes that third party's intellectual property rights, <strong>Developer, not Apple</strong>, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.</p>
+        </section>
+        <section id="s5">
+          <h2>5. Recording Capture; Artificial Intelligence Features; Accuracy and Completeness of Output</h2>
+          <p><strong>5.1 How the Application works.</strong> The Application records audio on your device, converts speech into text, and generates summaries, notes, action items, and other derived content (collectively, "<strong>Output</strong>") using automated speech recognition and large language models, some of which are operated by third parties. Details of what data is processed, and where, are described in our Privacy Policy at <a href="https://daibutsu7.github.io/voicememoai-docs/privacy.html">https://daibutsu7.github.io/voicememoai-docs/privacy.html</a>.</p>
+          <p><strong>5.2 Recording may fail, and recordings may be lost.</strong> The recording function of the Application depends on your device's microphone, its operating system, available storage, battery and thermal state, permissions, and other conditions outside Developer's control. <strong>Developer does not warrant that any recording will start, will continue, will run for its full duration, will complete, will be audible or of usable quality, or will be saved, retained, or remain playable.</strong></p>
+          <p>A recording may fail to start, stop unexpectedly, be truncated, be silent or inaudible, be degraded by noise or distortion, be corrupted, or be lost as a result of, among other things: an incoming call, alarm, or other interruption; a limit imposed by the operating system on background execution, on audio recording, or on microphone access; another application or device taking control of the microphone or audio input; a low-power, low-storage, or thermal condition; a permission being denied, revoked, or changed; a hardware, operating-system, or Application fault; a crash or forced termination of the Application; or the restart, reset, update, repair, loss, or damage of your device. <strong>A recording that fails, is not saved, or is lost cannot be recovered, and the underlying event cannot be recreated.</strong></p>
+          <p><strong>5.3 Output may be wrong.</strong> Speech recognition and generative artificial intelligence rely on emerging technology. <strong>You acknowledge and agree that Output may be inaccurate, incomplete, misleading, biased, or fabricated, and does not represent the views of Developer.</strong> Accuracy depends on many factors outside Developer's control, including microphone quality, background noise, cross-talk, speaker accent and speaking style, distance from the microphone, recording length, technical terminology, proper nouns, language and dialect, network conditions, and the behavior of your device and its operating system.</p>
+          <p><strong>Please note that even where Output appears accurate because of its level of detail or specificity, it may still contain material inaccuracies.</strong> Output that reads as a confident, well-organized summary may nonetheless: state things that were never said; attribute a statement to the wrong speaker, merge two or more speakers into one, split a single speaker into several, or fail to identify a speaker at all; and render numbers, amounts, currencies, dates, times, names, and other figures incorrectly. <strong>Speaker labels are automated estimates. They are not identifications of, and are not warranted to correspond to, any particular person.</strong></p>
+          <p><strong>5.4 Output may be incomplete.</strong> <strong>Developer does not warrant that any word, sentence, statement, speaker, figure, or portion of a recording will appear in any transcript or other Output.</strong> Speech that is quiet, distant, overlapping, muffled, heavily accented, or in an unexpected language may not be captured at all. Automated methods are used to detect the presence of speech, and those methods may treat audible speech as silence and discard it. Content may also be omitted, shortened, condensed, or summarized away because of the length of a recording, the processing or context-length limits of the underlying models, timeouts, network errors, or the design of any template or summary style you select. <strong>The absence of any statement from a transcript or from Output is not evidence that the statement was not made.</strong></p>
+          <p><strong>5.5 You must verify Output.</strong> <strong>You are solely responsible for reviewing, verifying, and interpreting all Output before relying on it, and you use Output at your own risk.</strong> Treat Output only as a starting point. Where a record is important — including any meeting, negotiation, transaction, agreement, disciplinary matter, or legal, medical, financial, or regulatory matter — you must check the Output against the underlying audio, and you should also maintain an independent official record. <strong>Do not rely on the Application as your sole record of any important matter.</strong></p>
+          <p><strong>5.6 Not professional advice.</strong> <strong>The Application and its Output are not a substitute for professional advice, including legal, medical, financial, tax, accounting, human resources, or safety advice, and do not function as a licensed professional of any kind.</strong> You must independently evaluate all Output for accuracy and appropriateness before relying on it, and you should consult a qualified professional where appropriate.</p>
+          <p><strong>5.7 Output may not be unique.</strong> Due to the nature of generative artificial intelligence, <strong>your Output may not be unique</strong>. Other users may receive Output that is similar to, or the same as, your Output, and Output may resemble content available elsewhere. You hereby waive and release Developer from any claim that another user's Output is not unique.</p>
+          <p><strong>5.8 No liability for capture, accuracy, or completeness.</strong> <strong>To the maximum extent permitted by applicable law, Developer shall not be liable for any claim, loss, damage, cost, or expense arising out of or relating to: (a) any failure of a recording to start, continue, complete, or be saved, and any recording that is missing, truncated, silent, degraded, corrupted, or lost; (b) any inaccuracy, error, mistranscription, mistranslation, misattribution of a speaker, or fabricated content in any Output; (c) any omission from any Output; or (d) any decision made, action taken, or action not taken, by you or by any other person, in reliance on any Output or on the absence of content from any Output.</strong> This Section is subject to Section 12.4.</p>
+        </section>
+        <section id="s6">
+          <h2>6. Recording: Your Sole Responsibility for Consent and Legality</h2>
+          <p><strong>6.1 Laws differ, and some require the consent of everyone.</strong> The laws governing the notice, notification, and consent requirements for recording conversations <strong>vary by country, by state, and by the type of communication</strong>. In some jurisdictions it is a <strong>criminal offense</strong>, or gives rise to <strong>statutory damages without proof of any actual harm</strong>, to record a conversation without the prior consent of every participant.</p>
+          <p>Without limiting the generality of the foregoing, and <strong>for your information only and not as legal advice</strong>, the following U.S. states generally require the consent of <strong>all parties</strong> to record a confidential communication: <strong>California, Connecticut, Delaware, Florida, Illinois, Maryland, Massachusetts, Montana, New Hampshire, Oregon, Pennsylvania, and Washington</strong>; and <strong>Nevada</strong> requires all-party consent for telephone communications. Other jurisdictions, including under U.S. federal law (18 U.S.C. §2511) and the laws of other countries, impose their own requirements. <strong>These lists are not exhaustive, may change, and are subject to numerous exceptions and judicial interpretations. If you are unsure, consult a qualified attorney before recording.</strong></p>
+          <p><strong>6.2 You are solely responsible.</strong> <strong>You — and not Developer — are solely responsible for (a) determining whether and how you may lawfully record any conversation, meeting, call, or other communication; (b) providing any notice required by law to every participant; and (c) obtaining any consent required by law from every participant, before you begin recording.</strong> You represent and warrant that you will comply with all applicable laws, workplace policies, and contractual obligations relating to recording, monitoring, and the processing of personal information.</p>
+          <p><strong>6.3 Prohibited uses.</strong> You shall not use the Application to record any communication surreptitiously where the law requires notice or consent; to record any communication to which you are not a party where prohibited by law; or for any purpose of committing a criminal or tortious act. <strong>Developer does not condone, and expressly prohibits, the use of the Application for unlawful recording or surveillance.</strong></p>
+          <p><strong>6.4 Others' content.</strong> If a recording, transcript, or Output features or contains information about another person, you represent and warrant that you have obtained all rights, permissions, and consents necessary for you to record that person and for the Application to process that content.</p>
+          <p><strong>6.5 No liability for your recordings.</strong> The Application is a general-purpose tool. Developer does not select what you record, when you record, or whom you record, does not participate in any recording, and has no ability to know whether any required notice or consent has been given. <strong>To the maximum extent permitted by applicable law, Developer shall not be liable for any claim, demand, proceeding, investigation, liability, damages (including statutory, multiple, or punitive damages), fine, penalty, cost, or expense of any kind arising out of or relating to any recording that you make, cause to be made, retain, transcribe, share, publish, or use, including any such claim brought by a participant in the recording, by a person referred to in the recording, by an employer, or by any regulator or public authority, and including any claim arising from a failure to give notice to, or to obtain the consent of, any person.</strong> Section 15 (Indemnification) also applies to any such claim.</p>
+        </section>
+        <section id="s7">
+          <h2>7. Data, Storage, Loss, Backup, and Security</h2>
+          <p><strong>7.1 Local storage.</strong> The Application stores your recordings and notes on your device, and — only if you enable it — synchronizes them to a cloud storage service you designate (such as iCloud Drive or Google Drive). The Application does not require an account with Developer.</p>
+          <p><strong>7.2 No warranty of preservation; backup is your responsibility.</strong> <strong>Developer is not responsible for the failure to store, preserve, or maintain any recording, transcript, note, setting, or other data, and shall not be liable for any loss, corruption, deletion, or inaccessibility of such data.</strong> Data may be lost or corrupted as a result of, among other things, a fault or crash of the Application, an update to your operating system, insufficient storage, loss, damage, theft, repair, or reset of your device, an outage or change of a third-party cloud service, or your own deletion of data.</p>
+          <p><strong>You must maintain your own backups of all data that is important to you.</strong> If you delete data, or uninstall the Application, the data may be permanently and irrecoverably lost.</p>
+          <p><strong>7.3 No warranty of security or confidentiality.</strong> No method of electronic storage or transmission is completely secure, and no security measure can be guaranteed. <strong>Developer does not warrant that the Application, your device, or any network, storage, or service used with the Application is or will remain secure, or that your recordings, transcripts, notes, or other content will remain private, confidential, or free from unauthorized access, acquisition, alteration, or disclosure.</strong></p>
+          <p><strong>7.4 Your device, your accounts, and your credentials are your responsibility.</strong> <strong>You are solely responsible for securing your device and the accounts and services you use with the Application</strong>, including setting and protecting a device passcode and biometric lock, enabling device encryption, keeping your operating system and the Application up to date, protecting your account credentials, and controlling who has physical or remote access to your device and to those accounts. <strong>To the maximum extent permitted by applicable law, Developer shall not be liable for any access to, acquisition of, or disclosure or misuse of any content or information resulting from the loss, theft, sale, transfer, lending, repair, servicing, or shared use of your device, from another person's use of your unlocked device or of your accounts, from any device backup or device-to-device transfer you perform, or from your disclosure or loss of any credential.</strong></p>
+          <p><strong>7.5 Destinations you choose.</strong> If you enable synchronization, or if you export, share, print, copy, or transmit any recording, transcript, note, or Output to iCloud Drive, Google Drive, or any other service, application, storage location, or recipient (each a "<strong>Destination</strong>"), <strong>that content leaves the Application and is thereafter subject to the security, access controls, retention practices, terms, and policies of that Destination, and to the acts and omissions of every person who controls or has access to it — none of which are within Developer's control.</strong> <strong>To the maximum extent permitted by applicable law, Developer shall not be liable for any access to, acquisition of, retention of, disclosure of, or misuse of content that has been synchronized, exported, shared, copied, or transmitted to any Destination</strong>, including where the Destination suffers a security incident, changes its terms or practices, discloses content in response to legal process, or is accessed by an administrator, employer, family member, or any other person with rights over, or access to, the account or location you selected.</p>
+          <p><strong>7.6 Security incidents.</strong> <strong>To the maximum extent permitted by applicable law, Developer shall not be liable for any unauthorized access to, acquisition of, alteration of, loss of, or disclosure of any content or personal information, however caused, including as a result of any attack on, compromise of, defect in, or unauthorized access to any device, system, network, service, or provider used in connection with the Application, and including any act or omission of any third party.</strong> Developer handles personal information as described in the Privacy Policy at <a href="https://daibutsu7.github.io/voicememoai-docs/privacy.html">https://daibutsu7.github.io/voicememoai-docs/privacy.html</a> and will comply with any notification obligation that applicable law imposes on Developer. <strong>Nothing in this Section 7 limits any right you have under any mandatory data protection or consumer protection law, or limits any liability that cannot be limited under applicable law (see Section 12.4).</strong></p>
+        </section>
+        <section id="s8">
+          <h2>8. Subscriptions, Payment, and Refunds</h2>
+          <p><strong>8.1 Purchases through Apple.</strong> Subscriptions and other purchases are sold and processed by Apple through the App Store, and are subject to the Apple Media Services Terms and Conditions.</p>
+          <p><strong>8.2 Auto-renewal.</strong> Subscriptions offered through the Application are <strong>auto-renewable</strong>. Unless you cancel, your subscription automatically renews at the end of each subscription period and your Apple account will be charged the then-current price for the renewal term. <strong>Payment is charged to your Apple account at confirmation of purchase and at each renewal.</strong> The subscription name, duration, and price are disclosed to you before purchase, on the purchase screen within the Application.</p>
+          <p><strong>8.3 Cancellation.</strong> <strong>You may cancel at any time in the Settings of your Apple account. Cancellation takes effect at the end of the current subscription period; you retain access until then.</strong> To avoid being charged, you must cancel at least 24 hours before the end of the current period. Developer cannot cancel your subscription on your behalf.</p>
+          <p><strong>8.4 Refunds.</strong> Refunds are handled by Apple in accordance with Apple's refund policy. <strong>Developer does not process payments and cannot issue refunds.</strong> Developer does not guarantee any refund.</p>
+          <p><strong>8.5 Price changes.</strong> Developer may change subscription prices. Any price change will apply only to subsequent renewal terms and will be notified to you in advance in the manner required by Apple and by applicable law. You may cancel before the change takes effect.</p>
+          <p><strong>8.6 Free trials and promotional offers</strong>, where offered, are subject to the terms disclosed at the time of the offer, and convert to a paid subscription unless cancelled before the end of the offer period.</p>
+        </section>
+        <section id="s9">
+          <h2>9. Maintenance and Support (Apple Minimum Terms §3)</h2>
+          <p><strong>Developer is solely responsible for providing any maintenance and support services with respect to the Application</strong>, as specified in this Agreement or as required under applicable law. <strong>You and Developer acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the Application.</strong></p>
+          <p>Developer provides support on a reasonable-efforts basis by email at <a href="mailto:taf.app.dev@gmail.com">taf.app.dev@gmail.com</a>. Developer does not guarantee any response time.</p>
+        </section>
+        <section id="s10">
+          <h2>10. Modification, Suspension, and Termination of the Application</h2>
+          <p>Developer may modify, add to, or remove features of the Application, and may suspend or discontinue the Application in whole or in part, at any time. Where a change materially and adversely affects a paid feature you are then subscribed to, Developer will use reasonable efforts to notify you in advance. <strong>Except as expressly provided in this Agreement, Developer shall not be liable for any such modification, suspension, or discontinuation.</strong></p>
+          <p>This Agreement terminates automatically if you fail to comply with any of its terms. Upon termination you must cease all use of the Application and delete all copies. Sections 4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17, and 19 survive termination.</p>
+        </section>
+        <section id="s11">
+          <h2>11. Warranty; Disclaimer (Apple Minimum Terms §4)</h2>
+          <p><strong>11.1 Apple refund mechanism.</strong> <strong>Developer is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. In the event of any failure of the Application to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the Application to you; and, to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the Application, and any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be Developer's sole responsibility.</strong></p>
+          <p><strong>11.2 Disclaimer.</strong> <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APPLICATION AND ALL OUTPUT AND CONTENT MADE AVAILABLE THROUGH IT ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND. DEVELOPER HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE APPLICATION AND ALL OUTPUT, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF TITLE, OF QUIET ENJOYMENT, AND OF NON-INFRINGEMENT, AND ANY WARRANTY ARISING OUT OF COURSE OF DEALING, USAGE, OR TRADE.</strong></p>
+          <p><strong>DEVELOPER DOES NOT WARRANT THAT THE APPLICATION OR ANY OUTPUT WILL BE ACCURATE, COMPLETE, RELIABLE, CURRENT, OR ERROR-FREE; THAT THE APPLICATION WILL BE UNINTERRUPTED OR SECURE; THAT ANY RECORDING WILL BE STARTED, CAPTURED, COMPLETED, SAVED, OR PRESERVED; THAT ANY CONTENT WILL REMAIN PRIVATE, CONFIDENTIAL, OR FREE FROM UNAUTHORIZED ACCESS OR DISCLOSURE; THAT ANY THIRD PARTY WILL COMPLY WITH ITS OWN TERMS, POLICIES, OR OBLIGATIONS; THAT DEFECTS WILL BE CORRECTED; OR THAT THE APPLICATION WILL MEET YOUR REQUIREMENTS. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM DEVELOPER OR THROUGH THE APPLICATION, SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS AGREEMENT.</strong></p>
+          <p><strong>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.</strong> Developer does not disclaim any warranty or other right that Developer is prohibited from disclaiming under applicable law.</p>
+        </section>
+        <section id="s12">
+          <h2>12. Limitation of Liability</h2>
+          <p><strong>12.1 Exclusion of certain damages.</strong> <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DEVELOPER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, BUSINESS, OPPORTUNITY, GOODWILL, REPUTATION, OR DATA, OR FOR BUSINESS INTERRUPTION OR COST OF SUBSTITUTE GOODS OR SERVICES, ARISING OUT OF OR RELATING TO THIS AGREEMENT OR YOUR USE OF, OR INABILITY TO USE, THE APPLICATION OR ANY OUTPUT, UNDER ANY THEORY OF LIABILITY — WHETHER CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, WARRANTY, STATUTE, OR OTHERWISE — AND WHETHER OR NOT DEVELOPER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</strong></p>
+          <p><strong>12.2 Cap.</strong> <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DEVELOPER'S TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE APPLICATION SHALL NOT EXCEED THE GREATER OF (A) THE TOTAL AMOUNT YOU ACTUALLY PAID FOR THE APPLICATION IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS (US$100).</strong></p>
+          <p><strong>12.3 Specific matters.</strong> Without limiting the generality of Sections 12.1 and 12.2, and <strong>to the maximum extent permitted by applicable law, Developer shall not be liable for any claim, loss, damage, cost, or expense arising out of or relating to:</strong></p>
+        <ul class="lettered">
+          <li>(a) <strong>any failure of a recording</strong> to start, continue, complete, or be saved, and any recording that is missing, truncated, silent, degraded, corrupted, or lost, and any inability to reproduce the event that was to be recorded;</li>
+          <li>(b) <strong>any inaccuracy or error in any Output</strong>, including any mistranscription, mistranslation, misattribution of a speaker, fabricated statement, or incorrect number, amount, currency, date, time, name, or other figure;</li>
+          <li>(c) <strong>any omission from any Output</strong>, including speech that was not captured, was treated as silence, was discarded, or was cut short, and any reliance on the absence of content from Output;</li>
+          <li>(d) <strong>any recording, monitoring, interception, retention, sharing, or publication carried out by you or at your direction</strong>, and any liability, damages, fine, penalty, claim, investigation, or proceeding arising from a failure to give notice to, or to obtain the consent of, any person, or from any other breach of law, policy, or contract by you;</li>
+          <li>(e) <strong>any loss, corruption, deletion, or inaccessibility of any data</strong>;</li>
+          <li>(f) <strong>any unauthorized access to, acquisition of, alteration of, or disclosure of any content or personal information</strong>, including as a result of the loss, theft, or shared use of a device, the act or omission of any third party, or a security incident affecting any device, system, network, service, Destination, or provider;</li>
+          <li>(g) <strong>any act or omission of any third party or third-party provider</strong>, including any breach by a third-party provider of its own terms, policies, certifications, or representations concerning the handling, retention, disclosure, or use of data (see Section 14);</li>
+          <li>(h) <strong>any decision made, action taken, or action not taken</strong> by you or by any other person in reliance on any Output; and</li>
+          <li>(i) <strong>any modification, suspension, interruption, degradation, or discontinuation</strong> of the Application or of any feature or third-party service.</li>
+        </ul>
+          <p><strong>This Section 12.3 is illustrative and does not limit Sections 12.1 and 12.2, and is itself subject to Section 12.4.</strong></p>
+          <p><strong>12.4 Exceptions.</strong> <strong>Nothing in this Agreement excludes or limits Developer's liability for (a) fraud or fraudulent misrepresentation, (b) willful misconduct or gross negligence, (c) death or personal injury caused by Developer's negligence, or (d) any other liability that cannot be excluded or limited under applicable law.</strong> In particular, and without limitation, where the Consumer Contract Act of Japan applies, the limitations in Sections 12.1, 12.2, and 12.3 and the disclaimers elsewhere in this Agreement do not apply to liability arising from Developer's intent or gross negligence, and do not operate as a total exclusion of Developer's liability for breach of this Agreement. <strong>Every disclaimer and limitation in this Agreement, wherever it appears, is to be read as applying only to the maximum extent permitted by applicable law and as subject to this Section 12.4.</strong></p>
+          <p><strong>12.5 Allocation of risk.</strong> The disclaimers and limitations in Sections 5, 6, 7, 11, 12, and 14 are a fundamental basis of the bargain between you and Developer and allocate risk between the parties in light of the price paid for the Application. They apply even if a limited remedy fails of its essential purpose. <strong>Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above may not apply to you.</strong></p>
+        </section>
+        <section id="s13">
+          <h2>13. Product Claims (Apple Minimum Terms §5)</h2>
+          <p><strong>You and Developer acknowledge that Developer, not Apple, is responsible for addressing any claims of yours or of any third party relating to the Application or your possession and/or use of the Application, including, but not limited to: (i) product liability claims; (ii) any claim that the Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.</strong> This Agreement does not limit Developer's liability to you beyond what is permitted by applicable law.</p>
+        </section>
+        <section id="s14">
+          <h2>14. Third Party Services and Third Party Terms (Apple Minimum Terms §9)</h2>
+          <p><strong>14.1 Services used.</strong> The Application uses services operated by third parties, which may include Google (Gemini API and Google Drive), RevenueCat, Cloudflare, and Apple (iCloud) (each, a "<strong>Third-Party Provider</strong>"). Your use of those services is also governed by the terms and privacy policies of their respective providers.</p>
+          <p><strong>14.2 Developer does not control them.</strong> Each Third-Party Provider is an independent entity that operates outside Developer's control. <strong>Developer does not control, and has no practical ability to audit, inspect, verify, supervise, or enforce, how a Third-Party Provider actually handles data it receives, what it does with that data internally, how long it retains it, where it stores it, to whom it discloses it, whether it uses it to develop or improve its own products or models, or whether it in fact complies with its own published terms, policies, certifications, or representations.</strong></p>
+          <p><strong>14.3 No guarantee of a Third-Party Provider's compliance with its own terms.</strong> Some Third-Party Providers publish terms, policies, certifications, or representations concerning how data submitted to them is handled — including, by way of example, representations that data submitted through their paid application programming interfaces is not used to train or improve their models, is retained only for a stated period or not at all, is processed only in stated locations, or is not disclosed to third parties. <strong>Developer relies on such representations but does not adopt, endorse, warrant, or guarantee them.</strong></p>
+          <p><strong>To the maximum extent permitted by applicable law, Developer makes no representation, warranty, or guarantee that any Third-Party Provider will comply with its own terms, policies, certifications, or representations, and Developer shall not be liable for any act or omission of any Third-Party Provider, including, without limitation:</strong></p>
+        <ul class="lettered">
+          <li>(a) <strong>any breach or violation by a Third-Party Provider of its own terms, policies, certifications, or representations;</strong></li>
+          <li>(b) <strong>any use, retention, copying, disclosure, sale, transfer, or repurposing of data by a Third-Party Provider contrary to its own terms, policies, or representations, or contrary to any agreement between Developer and that provider;</strong></li>
+          <li>(c) <strong>any use of data to train, retrain, fine-tune, evaluate, benchmark, or otherwise develop or improve any model, product, or service, whether or not permitted by that provider's terms;</strong></li>
+          <li>(d) <strong>any human review of data by or on behalf of a Third-Party Provider;</strong></li>
+          <li>(e) <strong>any security incident, unauthorized access, or data breach affecting a Third-Party Provider or its subprocessors;</strong></li>
+          <li>(f) <strong>any disclosure of data by a Third-Party Provider to any government, regulator, court, or other person, whether or not in response to legal process; or</strong></li>
+          <li>(g) <strong>any change to, degradation of, error in, suspension of, or discontinuation of a third-party service, or any failure, outage, or unavailability of it.</strong></li>
+        </ul>
+          <p><strong>Your remedy, if any, in respect of any such act or omission lies against the relevant Third-Party Provider and not against Developer.</strong> Nothing in this Section 14.3 limits Section 12.4, and nothing in it purports to exclude any liability of Developer for Developer's own intent or gross negligence.</p>
+          <p><strong>14.4 Third-party terms apply to you.</strong> <strong>You must comply with all applicable third party terms of agreement when using the Application</strong> — for example, you must not violate your wireless data service agreement, your employer's information-security or recording policy, or the terms of any meeting or conferencing service you use, when using the Application. Developer is not responsible for the content, operation, availability, pricing, or failure of any third-party service.</p>
+        </section>
+        <section id="s15">
+          <h2>15. Indemnification</h2>
+          <p>To the fullest extent permitted by applicable law, <strong>you will defend, indemnify, and hold harmless Developer from and against any claim, demand, proceeding, liability, loss, damage, cost, or expense (including reasonable attorneys' fees) brought by a third party arising out of or relating to: (a) your use or misuse of the Application; (b) your violation of this Agreement or of any applicable law or regulation, including any law governing the recording, monitoring, or interception of communications; (c) your violation of any right of a third party, including any intellectual property, privacy, publicity, or confidentiality right; or (d) the content of any recording, transcript, or Output you create, store, share, or act upon.</strong></p>
+          <p>Developer reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and you agree to cooperate with such defense. You shall not settle any such matter in a way that imposes any obligation on Developer without Developer's prior written consent.</p>
+        </section>
+        <section id="s16">
+          <h2>16. Release</h2>
+          <p>To the fullest extent permitted by applicable law, <strong>you release Developer from all responsibility, liability, claims, demands, and damages (actual and consequential) of every kind and nature, known and unknown, arising out of or related to disputes between you and any other person, and the acts or omissions of third parties.</strong></p>
+          <p><strong>If you are a consumer who resides in California, you waive your rights under California Civil Code §1542, which provides:</strong> "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
+        </section>
+        <section id="s17">
+          <h2>17. Legal Compliance (Apple Minimum Terms §7)</h2>
+          <p><strong>You represent and warrant that (i) you are not located in a region that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" region; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</strong></p>
+        </section>
+        <section id="s18">
+          <h2>18. Changes to this Agreement</h2>
+          <p>Developer may modify this Agreement from time to time. <strong>Developer will post the revised Agreement at <a href="https://daibutsu7.github.io/voicememoai-docs/terms.html">https://daibutsu7.github.io/voicememoai-docs/terms.html</a> with an updated "Last updated" date, and, where the changes are material, will provide reasonable advance notice through the Application or by other reasonable means before the changes take effect.</strong> Changes will not apply retroactively and will become effective no earlier than the date stated in the notice. <strong>If you do not agree to a revised Agreement, you must stop using the Application before the effective date and may cancel your subscription in the Settings of your Apple account.</strong> Your continued use of the Application after the effective date constitutes acceptance of the revised Agreement.</p>
+        </section>
+        <section id="s19">
+          <h2>19. Governing Law and Venue</h2>
+          <p><strong>19.1 Governing law.</strong> This Agreement is governed by the laws of <strong>Japan</strong>, without regard to its conflict of laws principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+          <p><strong>19.2 Venue — non-exclusive.</strong> You and Developer agree that the <strong>Tokyo District Court, Japan, shall have non-exclusive jurisdiction</strong> over any dispute arising out of or relating to this Agreement.</p>
+          <p><strong>19.3 Consumer protections preserved.</strong> <strong>Nothing in Section 19.1 or 19.2 deprives you, as a consumer, of (a) the protection afforded to you by any mandatory provision of the law of the country or state of your habitual residence, or (b) your right to bring proceedings in the courts of the place where you are domiciled, or in a small claims court of competent jurisdiction.</strong> Where a mandatory consumer protection law of your habitual residence would give you greater protection than this Agreement or than Japanese law, that law applies to the extent of the conflict.</p>
+          <p><strong>19.4 No arbitration; no class action waiver.</strong> This Agreement does <strong>not</strong> require arbitration and does <strong>not</strong> waive your right to participate in a class action.</p>
+        </section>
+        <section id="s20">
+          <h2>20. Developer Name, Address, and Contact Information (Apple Minimum Terms §8)</h2>
+          <p>Any question, complaint, or claim with respect to the Application should be directed to:</p>
+          <p><strong><span class="todo">TAF Studio — full legal name of the individual proprietor</span></strong></p>
+          <p><span class="todo">Postal address, including postal code, city, prefecture, Japan</span></p>
+          <p>Telephone: <span class="todo">+81-XX-XXXX-XXXX</span></p>
+          <p>Email: <strong><a href="mailto:taf.app.dev@gmail.com">taf.app.dev@gmail.com</a></strong></p>
+          <p><strong>Notice to California residents.</strong> Under California Civil Code §1789.3, California users are entitled to the following consumer rights notice: The Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by telephone at (800) 952-5210.</p>
+        </section>
+        <section id="s21">
+          <h2>21. Third Party Beneficiary (Apple Minimum Terms §10)</h2>
+          <p><strong>You and Developer acknowledge and agree that Apple, and Apple's subsidiaries, are third party beneficiaries of this Agreement, and that, upon your acceptance of the terms and conditions of this Agreement, Apple will have the right (and will be deemed to have accepted the right) to enforce this Agreement against you as a third party beneficiary hereof.</strong></p>
+        </section>
+        <section id="s22">
+          <h2>22. General</h2>
+          <p><strong>22.1 Entire agreement.</strong> This Agreement, together with the Privacy Policy at <a href="https://daibutsu7.github.io/voicememoai-docs/privacy.html">https://daibutsu7.github.io/voicememoai-docs/privacy.html</a>, constitutes the entire agreement between you and Developer regarding the Application, and supersedes all prior agreements regarding its subject matter.</p>
+          <p><strong>22.2 Severability.</strong> If any provision of this Agreement is held to be unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, or, if it cannot be so modified, severed, and the remaining provisions shall remain in full force and effect.</p>
+          <p><strong>22.3 No waiver.</strong> Developer's failure to enforce any provision shall not constitute a waiver of that or any other provision.</p>
+          <p><strong>22.4 Assignment.</strong> You may not assign or transfer this Agreement. Developer may assign this Agreement in connection with a merger, acquisition, or sale of assets, or by operation of law.</p>
+          <p><strong>22.5 Force majeure.</strong> Developer shall not be liable for any failure or delay caused by circumstances beyond its reasonable control.</p>
+          <p><strong>22.6 Language.</strong> This Agreement is provided in English and Japanese. <strong><span class="todo">Select one: (a) In the event of any inconsistency, the English version prevails for users in the United States and the Japanese version prevails for users in Japan; or (b) the Japanese version prevails.</span></strong></p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 TAF Studio / ボイスメモAI. All rights reserved.<br>
+        <a href="index.html">Support &amp; Legal</a>｜<a href="privacy.html">Privacy Policy</a>｜<a href="terms.html">日本語</a>
+    </footer>
+
+</body>
+
+</html>

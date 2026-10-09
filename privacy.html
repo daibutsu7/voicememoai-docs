@@ -268,22 +268,22 @@
     <header>
         <p class="app-name">ボイスメモAI</p>
         <h1>プライバシーポリシー</h1>
-        <p class="updated">最終更新日：2026年3月3日</p>
+        <p class="updated">最終更新日：2026年10月9日</p>
         <p class="lang-switch"><a href="privacy-en.html">English version →</a></p>
     </header>
 
     <main>
 
         <div class="intro">
-            <p>ボイスメモAI（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の適切な取り扱いに努めます。本プライバシーポリシーは、本アプリが収集する情報、その利用目的、および第三者への提供について説明します。
+            <p>ボイスメモAI（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の適切な取り扱いに努めます。本プライバシーポリシーは、本アプリが取り扱う情報、その利用目的、および外部サービスとの通信について説明します。
             </p>
         </div>
 
-        <!-- 1. 収集する情報 -->
+        <!-- 1. 取り扱う情報 -->
         <section>
-            <h2>1. 収集する情報</h2>
+            <h2>1. 取り扱う情報</h2>
 
-            <h3>1-1. ユーザーが直接提供する情報</h3>
+            <h3>1-1. 端末内で作成・保存される情報</h3>
             <table>
                 <thead>
                     <tr>
@@ -294,45 +294,185 @@
                 <tbody>
                     <tr>
                         <td>音声データ</td>
-                        <td>アプリ内で録音した音声ファイル</td>
+                        <td>アプリ内で録音した、または取り込んだ音声ファイル（Mac版では会議アプリ等のシステム音声を含む）</td>
                     </tr>
                     <tr>
-                        <td>テキストデータ</td>
-                        <td>文字起こし結果・AIノートの内容</td>
+                        <td>文字起こしテキスト・AIノート</td>
+                        <td>端末内で作成した文字起こし結果と、そこから生成したノート・議事録</td>
                     </tr>
                     <tr>
-                        <td>設定情報</td>
-                        <td>テンプレート、辞書登録、命名規則等のアプリ設定</td>
+                        <td>取り込んだ画像</td>
+                        <td>録音中にカメラで撮影した画像、写真から選んだ画像、Mac版で取得したスクリーンショット</td>
+                    </tr>
+                    <tr>
+                        <td>カレンダー予定の情報</td>
+                        <td>カレンダー連携をONにし、予定を録音に紐付けた場合のみ、その予定のID・タイトル・開始時刻</td>
+                    </tr>
+                    <tr>
+                        <td>設定情報・利用量</td>
+                        <td>テンプレート、用語辞書、命名規則等のアプリ設定、無料枠・利用枠の使用量</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h3>1-2. 自動的に収集する情報</h3>
-            <p>本アプリは、クラッシュレポートや利用統計などの診断情報を収集する場合があります。この情報は個人を特定するものではありません。</p>
+            <h3>1-2. 開発者の中継サーバーで取り扱う情報</h3>
+            <p>AIノートを生成するとき、リクエストは開発者が運用する中継サーバー（Cloudflare Workers）を経由してGoogleに送られます。このとき中継サーバーが受け取る情報は次のとおりです。</p>
+            <ul>
+                <li>端末ごとに生成される匿名のアプリ用ID（ランダムな文字列。氏名・Apple IDとは無関係で、アプリを再インストールすると変わります）</li>
+                <li>有料プラン契約者の場合、購入状態を確認するためのApple署名付きの取引情報</li>
+                <li>無料枠・利用回数制限の確認に使うカウンター値</li>
+                <li>ノート生成のために送られる文字起こしテキストと指示文（中継するだけで、開発者のサーバーには保存しません）</li>
+            </ul>
 
             <h3>1-3. 収集しない情報</h3>
             <ul>
                 <li>氏名・住所・電話番号などの個人識別情報</li>
-                <li>位置情報</li>
-                <li>連絡先</li>
+                <li>位置情報・連絡先</li>
+                <li>広告識別子、および広告・トラッキング目的のデータ</li>
             </ul>
+            <p>本アプリには、第三者の解析SDKやクラッシュレポートSDKは組み込まれていません。なお、端末でAppleへの診断データの共有を許可している場合、Appleが提供する集計データを開発者がApp Store Connect上で確認できることがあります。</p>
         </section>
 
-        <!-- 2. 情報の利用目的 -->
+        <!-- 2. 利用目的 -->
         <section>
             <h2>2. 情報の利用目的</h2>
-            <p>収集した情報は以下の目的にのみ使用します。</p>
+            <p>取り扱う情報は、以下の目的にのみ使用します。</p>
             <ul>
-                <li>音声の文字起こし処理（端末内で実行）</li>
-                <li>AIノートの自動生成（テキストデータのみ外部API経由で処理）</li>
-                <li>クラウドサービスへのファイル同期（ユーザーが設定した場合）</li>
-                <li>アプリの機能改善およびバグ修正</li>
+                <li>音声の文字起こし（端末内で実行）</li>
+                <li>AIノートの生成（文字起こしテキストを外部のAIサービスで処理）</li>
+                <li>ライブラリの端末間同期、および外部クラウドへの書き出し（ユーザーが設定した場合のみ）</li>
+                <li>サブスクリプション等の購入状態の確認、無料枠・利用回数の管理</li>
+                <li>アプリの不具合対応</li>
             </ul>
         </section>
 
-        <!-- 3. データの保存場所 -->
+        <!-- 3. 外部サービスとの通信 -->
         <section>
-            <h2>3. データの保存場所</h2>
+            <h2>3. 外部サービスとの通信</h2>
+            <p>本アプリは以下の外部サービスと通信します。データは各社のプライバシーポリシーに従って処理されます。音声ファイルがAIサービスに送信されることはありません。</p>
+
+            <!-- Gemini -->
+            <div class="service-card">
+                <h3>Google Gemini API <span class="service-tag">AIノート生成</span></h3>
+                <dl>
+                    <dt>送信するデータ</dt>
+                    <dd>文字起こしテキスト、ノートの書式を指定する指示文（選択したテンプレート）、ユーザーが登録した用語辞書・タグ候補。開発者の中継サーバー経由で送信されます</dd>
+                    <dt>送信しないデータ</dt>
+                    <dd>音声ファイル、撮影画像・スクリーンショット、カレンダー予定の情報</dd>
+                    <dt>目的</dt>
+                    <dd>AIによるノート・議事録の生成</dd>
+                    <dt>利用条件</dt>
+                    <dd>初回のノート生成前に、外部AIサービスへテキストを送信することへの同意を求めます。同意は設定の「プライバシー」から変更できます</dd>
+                    <dt>Googleでの取り扱い</dt>
+                    <dd>Gemini APIの有料サービス向け規約に基づいて処理されます。同規約では、送信内容はGoogleの製品改善・モデル学習には使用されないとされています（不正利用の検知のため、一定期間ログが保持される場合があります）</dd>
+                    <dt>関連リンク</dt>
+                    <dd><a href="https://ai.google.dev/gemini-api/terms" target="_blank">https://ai.google.dev/gemini-api/terms</a><br>
+                        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></dd>
+                </dl>
+                <div class="warning-box">
+                    ⚠️ 機密性の高い内容を含む会議では、文字起こしテキストが外部サービスに送信されることをご理解のうえでご利用ください。
+                </div>
+            </div>
+
+            <!-- Cloudflare -->
+            <div class="service-card">
+                <h3>Cloudflare Workers <span class="service-tag">中継サーバー</span></h3>
+                <dl>
+                    <dt>取り扱うデータ</dt>
+                    <dd>上記1-2の情報。AI生成リクエストを中継するために通過します</dd>
+                    <dt>プライバシーポリシー</dt>
+                    <dd><a href="https://www.cloudflare.com/privacypolicy/"
+                            target="_blank">https://www.cloudflare.com/privacypolicy/</a></dd>
+                </dl>
+            </div>
+
+            <!-- Apple -->
+            <div class="service-card">
+                <h3>Apple（App Store・iCloud） <span class="service-tag">購入・同期・端末内音声認識</span></h3>
+                <dl>
+                    <dt>取り扱うデータ</dt>
+                    <dd>購入・サブスクリプションの処理（StoreKit）、iCloudライブラリ同期（CloudKit）、iCloud Driveへの書き出し、端末内音声認識に必要な言語アセットのダウンロード</dd>
+                    <dt>プライバシーポリシー</dt>
+                    <dd><a href="https://www.apple.com/jp/legal/privacy/"
+                            target="_blank">https://www.apple.com/jp/legal/privacy/</a></dd>
+                </dl>
+            </div>
+
+            <!-- Google Drive -->
+            <div class="service-card">
+                <h3>Google Drive <span class="service-tag">書き出し・任意</span></h3>
+                <dl>
+                    <dt>送信するデータ</dt>
+                    <dd>ユーザーが書き出し対象に設定したノート・文字起こし・画像、および音声（音声の書き出しは設定でONにした場合のみ）</dd>
+                    <dt>利用条件</dt>
+                    <dd>ユーザーがGoogleアカウントでログインし、連携を有効にした場合のみ</dd>
+                    <dt>アクセス範囲</dt>
+                    <dd>権限は <code>drive.file</code>（本アプリが作成したファイルのみ）、<code>openid</code>、<code>email</code>（接続中のアカウント表示用）です。ログイン情報（トークン）は端末のキーチェーンに保存され、連携を解除すると削除されます</dd>
+                    <dt>プライバシーポリシー</dt>
+                    <dd><a href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></dd>
+                </dl>
+            </div>
+
+            <!-- Hugging Face -->
+            <div class="service-card">
+                <h3>Hugging Face <span class="service-tag">音声認識モデルの取得</span></h3>
+                <dl>
+                    <dt>通信の内容</dt>
+                    <dd>端末内の文字起こしに使う音声認識モデル（WhisperKit）を初回に取得するため、モデル配布元（Hugging Face）へ接続します。ユーザーの音声やテキストは送信されませんが、接続元のIPアドレス等の通信情報は配布元に記録される場合があります</dd>
+                    <dt>プライバシーポリシー</dt>
+                    <dd><a href="https://huggingface.co/privacy"
+                            target="_blank">https://huggingface.co/privacy</a></dd>
+                </dl>
+            </div>
+
+            <!-- RevenueCat (legacy) -->
+            <div class="service-card">
+                <h3>RevenueCat <span class="service-tag">旧バージョンのみ</span></h3>
+                <dl>
+                    <dt>説明</dt>
+                    <dd>現行バージョンはAppleのStoreKitで購入状態を確認しており、RevenueCatのSDKは使用していません。旧バージョンのアプリでは購入状態の管理にRevenueCatを使用しており、旧バージョンからのリクエストに限り、開発者の中継サーバーが匿名のアプリ用IDでRevenueCatに購入状態を照会します</dd>
+                    <dt>プライバシーポリシー</dt>
+                    <dd><a href="https://www.revenuecat.com/privacy/"
+                            target="_blank">https://www.revenuecat.com/privacy/</a></dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- 4. iCloudライブラリ同期 -->
+        <section>
+            <h2>4. iCloudライブラリ同期（任意）</h2>
+            <p>設定で「iCloudライブラリ同期」をONにすると、同じApple IDのiPhone・Mac間でライブラリを揃えます。初期設定はOFFです。</p>
+            <ul>
+                <li>同期されるデータ：録音の一覧情報、フォルダ構成、ノート、文字起こし、利用量の記録、ノート設定（用語辞書・カスタムテンプレート・出力設定等）</li>
+                <li>「音声も同期する」がONの場合（同期をONにした時点の初期値はON）、音声ファイルも同期されます。OFFにすると音声は各端末にのみ残ります</li>
+                <li>撮影画像・スクリーンショットは同期されません</li>
+                <li>データはAppleのCloudKit（あなたのプライベートデータベース）に保存され、開発者がその内容にアクセスすることはできません。保存容量はあなたのiCloud容量に計上されます</li>
+            </ul>
+        </section>
+
+        <!-- 5. 書き出し -->
+        <section>
+            <h2>5. 外部クラウドへの書き出し（任意）</h2>
+            <p>iCloud DriveまたはGoogle Driveへの書き出しは、成果物（ノート・文字起こし・画像、設定した場合は音声）をユーザー自身のクラウドに保存する一方向の機能です。書き出されたファイルは、クラウド側でユーザーが管理します。アプリ内で録音を削除しても、書き出し済みのファイルは自動では削除されません。</p>
+        </section>
+
+        <!-- 6. アクセス許可 -->
+        <section>
+            <h2>6. 端末のアクセス許可</h2>
+            <p>以下の許可は、該当する機能を使うときにのみ要求し、設定アプリからいつでも変更できます。</p>
+            <ul>
+                <li>マイク：録音のため</li>
+                <li>音声認識：端末内での文字起こし・ライブ字幕のため</li>
+                <li>カメラ：録音中のホワイトボードや資料の撮影のため（写真からの選択には許可は不要です）</li>
+                <li>カレンダー（任意）：録音と同じ時間帯の予定を探して紐付けるため。予定の読み取りは端末内で行い、予定の内容がAIサービスへ送信されることはありません。紐付けた予定には、アプリへのリンクを書き込むことがあります（設定でOFFにできます）</li>
+                <li>Mac版：会議アプリ等のシステム音声の録音（オーディオ録音）、画面収録（ユーザーが操作したときだけ静止画を取得し、録画は行いません）</li>
+            </ul>
+        </section>
+
+        <!-- 7. 保存場所・保持期間・削除 -->
+        <section>
+            <h2>7. 保存場所・保持期間・削除</h2>
             <table>
                 <thead>
                     <tr>
@@ -342,126 +482,44 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>録音音声ファイル</td>
-                        <td>ユーザーの端末内のみ</td>
+                        <td>音声・文字起こし・ノート・画像・設定</td>
+                        <td>ユーザーの端末内。同期や書き出しを設定した場合は、第4・5項のとおりiCloudまたはGoogle Driveにも保存されます</td>
                     </tr>
                     <tr>
-                        <td>文字起こしテキスト</td>
-                        <td>ユーザーの端末内のみ</td>
+                        <td>Google Driveのログイン情報</td>
+                        <td>端末のキーチェーン</td>
                     </tr>
                     <tr>
-                        <td>AIノート</td>
-                        <td>ユーザーの端末内（クラウド同期を設定した場合は各サービスにも保存）</td>
-                    </tr>
-                    <tr>
-                        <td>アプリ設定</td>
-                        <td>ユーザーの端末内のみ</td>
+                        <td>AI生成時の文字起こしテキスト</td>
+                        <td>開発者のサーバーには保存されません（Googleでの取り扱いは第3項を参照）</td>
                     </tr>
                 </tbody>
             </table>
+            <p>音声・文字起こし・ノート・画像は、ユーザーが削除するまで端末内に保持されます。端末内の動作ログ（初期設定で記録され、設定でOFFにできます。外部には送信されません）は、7日を過ぎると自動的に削除されます。</p>
+            <h3>削除の方法</h3>
+            <ul>
+                <li>録音を削除すると、端末内のデータが削除されます。iCloudライブラリ同期がONの場合は、同期先のデータも削除されます</li>
+                <li>iCloudライブラリ同期をOFFにしても、すでにiCloudにあるデータは自動では削除されません。iCloud上のデータは、端末の「設定 &gt; [ユーザー名] &gt; iCloud」のストレージ管理からアプリのデータとして削除できます</li>
+                <li>Google Driveの連携を解除すると、端末内のログイン情報が削除されます。書き出し済みのファイルはGoogle Drive上でご自身で削除してください。Googleアカウント側でも本アプリのアクセス権を取り消せます</li>
+                <li>アプリを削除すると、端末内のデータが削除されます（iCloud上のデータ、書き出し済みファイルは残ります）</li>
+            </ul>
         </section>
 
-        <!-- 4. 第三者サービスへのデータ送信 -->
+        <!-- 8. 未成年者のプライバシー -->
         <section>
-            <h2>4. 第三者サービスへのデータ送信</h2>
-            <p>本アプリは以下の第三者サービスを利用しており、それぞれのプライバシーポリシーに従ってデータが処理されます。</p>
-
-            <!-- OpenAI -->
-            <div class="service-card">
-                <h3>OpenAI <span class="service-tag">AIノート生成</span></h3>
-                <dl>
-                    <dt>送信するデータ</dt>
-                    <dd>文字起こしのテキストデータ</dd>
-                    <dt>送信しないデータ</dt>
-                    <dd>音声ファイルそのもの</dd>
-                    <dt>目的</dt>
-                    <dd>AIによるノート自動生成</dd>
-                    <dt>OpenAIの方針</dt>
-                    <dd>API経由で送信されたデータはAIモデルの学習には使用されません</dd>
-                    <dt>プライバシーポリシー</dt>
-                    <dd><a href="https://openai.com/ja/policies/privacy-policy/"
-                            target="_blank">https://openai.com/ja/policies/privacy-policy/</a></dd>
-                </dl>
-                <div class="warning-box">
-                    ⚠️ 機密性の高い内容を含む会議には、十分ご注意の上でご利用ください。
-                </div>
-            </div>
-
-            <!-- RevenueCat -->
-            <div class="service-card">
-                <h3>RevenueCat <span class="service-tag">サブスクリプション管理</span></h3>
-                <dl>
-                    <dt>送信するデータ</dt>
-                    <dd>購入履歴・サブスクリプション状態</dd>
-                    <dt>目的</dt>
-                    <dd>アプリ内課金の管理・検証</dd>
-                    <dt>プライバシーポリシー</dt>
-                    <dd><a href="https://www.revenuecat.com/privacy/"
-                            target="_blank">https://www.revenuecat.com/privacy/</a></dd>
-                </dl>
-            </div>
-
-            <!-- Google Drive -->
-            <div class="service-card">
-                <h3>Google Drive <span class="service-tag">クラウド同期・任意</span></h3>
-                <dl>
-                    <dt>送信するデータ</dt>
-                    <dd>ユーザーが同期設定したファイル（ノート・文字起こし・音声）</dd>
-                    <dt>目的</dt>
-                    <dd>ファイルのクラウド保存</dd>
-                    <dt>利用条件</dt>
-                    <dd>ユーザーがGoogle Driveとの連携を有効にした場合のみ</dd>
-                    <dt>プライバシーポリシー</dt>
-                    <dd><a href="https://policies.google.com/privacy"
-                            target="_blank">https://policies.google.com/privacy</a></dd>
-                </dl>
-            </div>
-
-            <!-- iCloud Drive -->
-            <div class="service-card">
-                <h3>iCloud Drive <span class="service-tag">クラウド同期・任意</span></h3>
-                <dl>
-                    <dt>送信するデータ</dt>
-                    <dd>ユーザーが同期設定したファイル</dd>
-                    <dt>目的</dt>
-                    <dd>ファイルのクラウド保存</dd>
-                    <dt>利用条件</dt>
-                    <dd>ユーザーがiCloud連携を有効にした場合のみ</dd>
-                    <dt>プライバシーポリシー</dt>
-                    <dd><a href="https://www.apple.com/jp/legal/privacy/"
-                            target="_blank">https://www.apple.com/jp/legal/privacy/</a></dd>
-                </dl>
-            </div>
-        </section>
-
-        <!-- 5. マイクのアクセス許可 -->
-        <section>
-            <h2>5. マイクのアクセス許可</h2>
-            <p>本アプリは録音機能のためにマイクへのアクセスを必要とします。マイクへのアクセス許可は、録音時にのみ使用されます。許可はいつでも設定アプリから変更できます。</p>
-            <p><code>設定 &gt; プライバシーとセキュリティ &gt; マイク</code></p>
-        </section>
-
-        <!-- 6. データの保持期間 -->
-        <section>
-            <h2>6. データの保持期間</h2>
-            <p>録音データ・文字起こし・AIノートの保持期間は、アプリの設定画面からユーザー自身が設定できます。ユーザーはいつでもアプリ内からデータを削除できます。</p>
-        </section>
-
-        <!-- 7. 未成年者のプライバシー -->
-        <section>
-            <h2>7. 未成年者のプライバシー</h2>
+            <h2>8. 未成年者のプライバシー</h2>
             <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のユーザーから意図的に個人情報を収集することはありません。</p>
         </section>
 
-        <!-- 8. プライバシーポリシーの変更 -->
+        <!-- 9. 変更 -->
         <section>
-            <h2>8. プライバシーポリシーの変更</h2>
-            <p>本ポリシーは予告なく変更される場合があります。重要な変更がある場合は、アプリのアップデートまたは本ページにて通知します。</p>
+            <h2>9. プライバシーポリシーの変更</h2>
+            <p>本ポリシーは、機能の追加や法令の変更等に応じて改訂することがあります。重要な変更がある場合は、アプリのアップデートまたは本ページでお知らせします。</p>
         </section>
 
-        <!-- 9. お問い合わせ -->
+        <!-- 10. お問い合わせ -->
         <section>
-            <h2>9. お問い合わせ</h2>
+            <h2>10. お問い合わせ</h2>
             <p>プライバシーに関するご質問・ご要望は、以下のメールアドレスまでお問い合わせください。</p>
             <p>
                 <a class="contact-email" href="mailto:taf.app.dev@gmail.com">taf.app.dev@gmail.com</a>
